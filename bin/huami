@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'huami'
+
+if ARGV.length != 1
+  Huami.usage()
+  exit(1)
+end
+
+key = ARGV[0]
+password = ask("Enter password:  ") { |q| q.echo = false }
+
+puts Huami.huami(key, password)
