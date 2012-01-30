@@ -8,5 +8,5 @@ Gem::Specification.new do |s|
   s.authors     = ['Wei Zhu']
   s.email       = 'yesmeck@gmail.com'
   s.files       = ['Rakefile', 'lib/huami.rb']
-  s.homepage    = 'http://yesmeck.com'
+  s.homepage    = 'https://rubygems.org/gems/huami'
 end
