@@ -3,7 +3,7 @@ Huami on Ruby
 
 Management your password in rememberable way.
 
-Source project:https://code.google.com/p/flower-password/
+Original project:https://code.google.com/p/flower-password/
 
 INSTALL
 --------
