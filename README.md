@@ -1,7 +1,7 @@
 Huami on Ruby
 ===============
 
-Management your password in rememberable way.
+Manage your password in rememberable way.
 
 Original project:https://code.google.com/p/flower-password/
 
