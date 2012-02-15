@@ -41,10 +41,5 @@ class Huami
     return string.strip =~ /^[0-9]$/
   end
 
-  def self.usage
-    puts "Usage:"
-    puts "huami.rb KEY"
-  end
-
 end
 

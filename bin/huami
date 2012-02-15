@@ -3,7 +3,8 @@
 require 'huami'
 
 if ARGV.length != 1
-  Huami.usage()
+  puts "Usage:"
+  puts "huami.rb KEY"
   exit(1)
 end
 
