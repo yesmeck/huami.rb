@@ -7,6 +7,6 @@ Gem::Specification.new do |s|
   s.executables << 'huami'
   s.authors     = ['Wei Zhu']
   s.email       = 'yesmeck@gmail.com'
-  s.files       = ['Rakefile', 'lib/huami.rb']
+  s.files       = `git ls-files`.split("\n")
   s.homepage    = 'https://rubygems.org/gems/huami'
 end
