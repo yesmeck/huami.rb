@@ -13,5 +13,5 @@ INSTALL
 USAGE
 ------
 
-    $ huami [KEY]
+    $ huami -h
 
