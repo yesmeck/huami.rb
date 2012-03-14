@@ -1,14 +1,54 @@
 #!/usr/bin/env ruby
 
 require 'huami'
+require 'optparse'
+require 'highline/import'
+
+options = {}
+
+optparse = OptionParser.new do |opts|
+  opts.banner = "Usage: huami [options] key"
+  options[:copy] = false
+  opts.on('-c', '--copy', 'Copy password to the clipboard instead of output.') do
+    options[:copy] = true
+  end
+  opts.on('-h', '--help', 'Display this screen.') do
+    puts opts
+    exit 1
+  end
+end
+
+optparse.parse!
 
 if ARGV.length != 1
-  puts "Usage:"
-  puts "huami.rb KEY"
-  exit(1)
+  puts optparse.help
+  exit 1
 end
 
 key = ARGV[0]
 password = ask("Enter password:  ") { |q| q.echo = false }
 
-puts Huami.huami(key, password)
+hash_password = Huami.huami(key, password)
+
+if options[:copy]
+  if system('which xclip > /dev/null 2>&1')
+    copy_cmd = 'xclip -selection clipboard'
+  # I don't get a mac, so I'm not sure is this right!
+  elsif system('which pbcopy > /dev/null 2>&1')
+    copy_cmd = 'pbcopy'
+  end
+
+  if copy_cmd.nil?
+    puts 'Can not find pbcopy or xclip command.'
+    exit 1
+  end
+  # Don't know why backticks do not work...
+  IO.popen("echo #{hash_password} | #{copy_cmd}")
+  puts 'The password has been copyed to you clipboard.'
+elsif
+  puts hash_password
+end
+
+exit 0
+
+
