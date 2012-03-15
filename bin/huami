@@ -43,7 +43,7 @@ if options[:copy]
     exit 1
   end
   # Don't know why backticks do not work...
-  IO.popen("echo #{hash_password} | #{copy_cmd}")
+  IO.popen("echo -n #{hash_password} | #{copy_cmd}")
   puts 'The password has been copyed to you clipboard.'
 elsif
   puts hash_password
