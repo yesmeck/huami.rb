@@ -8,7 +8,7 @@ Original project:https://code.google.com/p/flower-password/
 INSTALL
 --------
 
-    $ sudo gem install huami
+    $ gem install huami
 
 USAGE
 ------
