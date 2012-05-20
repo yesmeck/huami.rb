@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'huami'
+require 'bundler/setup'
 require 'optparse'
 require 'highline/import'
 

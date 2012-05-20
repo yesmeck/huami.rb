@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'highline/import'
 require 'openssl'
 
 class Huami
