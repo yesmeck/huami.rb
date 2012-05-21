@@ -3,7 +3,7 @@ Huami [![Build Status](https://secure.travis-ci.org/yesmeck/huami.rb.png?branch=
 
 Manage your password in rememberable way.
 
-Original project:https://code.google.com/p/flower-password/
+Original project:http://flowerpassword.com/
 
 INSTALL
 --------
