@@ -17,6 +17,10 @@ optparse = OptionParser.new do |opts|
     puts opts
     exit 1
   end
+  opts.on('-v', '--version', 'Print the version number of huami to the standard output stream.') do
+    puts Gem.loaded_specs['huami'].version
+    exit 0
+  end
 end
 
 optparse.parse!
