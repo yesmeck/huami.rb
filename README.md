@@ -14,6 +14,10 @@ USAGE
 ------
 
     $ huami -h
+    Usage: huami [options] key
+        -c, --copy                       Copy password to the clipboard instead of output.
+        -h, --help                       Display this screen.
+        -v, --version                    Print the version number of huami to the standard output stream.
 
 LICENSE
 -------
