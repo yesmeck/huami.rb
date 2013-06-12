@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    huami (1.0.2)
+    huami (1.0.3)
       clipboard
       highline
 
