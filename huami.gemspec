@@ -10,5 +10,6 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split("\n")
   s.homepage    = 'https://rubygems.org/gems/huami'
   s.add_runtime_dependency 'highline'
+  s.add_runtime_dependency 'clipboard'
   s.add_development_dependency 'rake'
 end

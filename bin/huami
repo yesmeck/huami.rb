@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
 require 'huami'
-require 'bundler/setup'
 require 'optparse'
 require 'highline/import'
+require 'clipboard'
 
 options = {}
 
@@ -36,19 +36,7 @@ password = ask("Enter password:  ") { |q| q.echo = false }
 hash_password = Huami.huami(key, password)
 
 if options[:copy]
-  if system('which xclip > /dev/null 2>&1')
-    copy_cmd = 'xclip -selection clipboard'
-  # I don't get a mac, so I'm not sure is this right!
-  elsif system('which pbcopy > /dev/null 2>&1')
-    copy_cmd = 'pbcopy'
-  end
-
-  if copy_cmd.nil?
-    puts 'Can not find pbcopy or xclip command.'
-    exit 1
-  end
-  # Don't know why backticks do not work...
-  IO.popen("echo -n #{hash_password} | #{copy_cmd}")
+  Clipboard.copy hash_password
   puts 'The password has been copyed to your clipboard.'
 elsif
   puts hash_password

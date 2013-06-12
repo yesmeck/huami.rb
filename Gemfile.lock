@@ -2,11 +2,13 @@ PATH
   remote: .
   specs:
     huami (1.0.2)
+      clipboard
       highline
 
 GEM
   remote: http://rubygems.org/
   specs:
+    clipboard (1.0.5)
     highline (1.6.19)
     rake (0.9.2.2)
 
